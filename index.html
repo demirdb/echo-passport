@@ -1,13 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>echo-passport</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Event Minigames</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <nav>
+      <button id="theme-toggle">☀️ Light Mode</button>
+    </nav>
+    
+    <main>
+      <!-- Vite looks in the /public folder for static assets referenced in HTML -->
+      <img src="/src/assets/LogoMiddle.svg" alt="Event Logo" class="logo" />
+      
+      <h1>Welcome to ECHO Passport!</h1>
+      <p>Play interactive games about robotics and technology to have fun and learn!</p>
+      
+      <div class="actions">
+        <a href="/browse" class="button primary">Browse Minigames</a>
+        <a href="/leaderboard" class="button secondary">Leaderboards</a>
+      </div>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>

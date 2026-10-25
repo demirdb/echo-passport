@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Browse Games</title>
+  </head>
+  <body>
+    <nav>
+      <button id="theme-toggle">☀️ Light Mode</button>
+    </nav>
+    
+    <main>
+      <!-- Vite looks in the /public folder for static assets referenced in HTML -->
+      <img src="/src/assets/LogoMiddle.svg" alt="Event Logo" class="logo" />
+      
+      <h1>Browse Minigames</h1>
+      <p>Choose a game and start learning!</p>
+      
+      <div class="actions">
+        <a href="/browse" class="button primary">Browse Minigames</a>
+        <a href="/leaderboard" class="button secondary">Leaderboards</a>
+      </div>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
