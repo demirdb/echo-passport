@@ -88,3 +88,108 @@ main {
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
 }
+
+/* --- BROWSE PAGE STYLES --- */
+
+.header-top {
+  display: flex;
+  justify-content: space-between; /* Pushes logo left, button right */
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 1rem;
+}
+
+.browse-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  z-index: 100;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.small-logo {
+  height: 50px;
+  width: auto;
+  transition: transform 0.2s;
+}
+
+.small-logo:active {
+  transform: scale(0.95);
+}
+
+#search-input {
+  width: 90%;
+  max-width: 400px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+}
+
+#search-input:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+  /* These two lines fix the weird centering issue */
+  align-content: start; 
+  justify-content: start;
+}
+
+.game-card {
+  background-color: var(--nav-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.2s, display 0.2s;
+}
+
+.game-card:active {
+  transform: scale(0.97);
+}
+
+.game-image {
+  width: 100%;
+  height: 160px;
+  background-color: #3f3f46;
+  object-fit: cover;
+}
+
+.game-info {
+  padding: 1rem;
+}
+
+.game-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: var(--accent-color);
+}
+
+.game-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
