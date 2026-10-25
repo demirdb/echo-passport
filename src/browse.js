@@ -35,7 +35,8 @@ const games = [
   { id: 7, name: "Cyber Pong", desc: "Classic pong with a modern twist.", img: "https://placehold.co/400x200/27272a/60a5fa?text=Pong" },
   { id: 8, name: "Snake Pit", desc: "Eat the dots, don't hit the walls.", img: "https://placehold.co/400x200/27272a/60a5fa?text=Snake" },
   { id: 9, name: "Math Whiz", desc: "Solve quickly to survive.", img: "https://placehold.co/400x200/27272a/60a5fa?text=Math" },
-  { id: 10, name: "Treasure Hunt", desc: "Find the hidden clues in the image.", img: "https://placehold.co/400x200/27272a/60a5fa?text=Treasure" }
+  { id: 10, name: "Treasure Hunt", desc: "Find the hidden clues in the image.", img: "https://placehold.co/400x200/27272a/60a5fa?text=Treasure" },
+  { id: 11, name: "Robot Builder", desc: "Combine Parts to build a robot!", img: "https://placehold.co/400x200/27272a/597A59?text=Merge", url: "/robotbuilder.html" }
 ];
 
 const container = document.getElementById('games-container');
@@ -43,14 +44,13 @@ const searchInput = document.getElementById('search-input');
 
 // 2. Function to generate the HTML for the cards
 function renderGames(gamesToRender) {
-  // Clear the container first
   container.innerHTML = '';
 
-  // Loop through the games and create a card for each
   gamesToRender.forEach(game => {
-    // We use an <a> tag so clicking the whole card can eventually link to the game
     const card = document.createElement('a');
-    card.href = `#play-${game.id}`; // Placeholder link
+    
+    // This tells it to use the url if it exists, otherwise use the #play- ID
+    card.href = game.url ? game.url : `#play-${game.id}`; 
     card.className = 'game-card';
     
     card.innerHTML = `
