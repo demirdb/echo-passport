@@ -1,19 +1,19 @@
 /* Define Light Mode colors (Default) */
 :root {
-  --bg-color: #f4f4f5;
-  --text-color: #18181b;
-  --accent-color: #597A59;
-  --btn-text: #ffffff;
-  --nav-bg: #ffffff;
+  --bg-color: #f3efe0; /* Hay / old paper pastel beige */
+  --text-color: #2e422e; /* Very dark green for readable body text */
+  --accent-color: #597A59; /* Your custom green */
+  --btn-text: #f3efe0; /* Matches paper background */
+  --nav-bg: #fbf9f1; /* Slightly lighter beige for cards and nav */
 }
 
 /* Define Dark Mode colors */
 [data-theme="dark"] {
-  --bg-color: #18181b;
-  --text-color: #f4f4f5;
-  --accent-color: #597A59;
-  --btn-text: #18181b;
-  --nav-bg: #27272a;
+  --bg-color: #1a211a; /* Dark gray with a hint of green */
+  --text-color: #dbe0db; /* Soft light gray-green for readability */
+  --accent-color: #597A59; /* Your custom green */
+  --btn-text: #1a211a; 
+  --nav-bg: #232d23; /* Slightly lighter green-gray for cards */
 }
 
 body {
@@ -136,7 +136,8 @@ main {
 }
 
 #search-input:focus {
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  /* Updated to a semi-transparent version of your green accent */
+  box-shadow: 0 0 0 3px rgba(89, 122, 89, 0.4);
 }
 
 .games-grid {
@@ -147,8 +148,6 @@ main {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  
-  /* These two lines fix the weird centering issue */
   align-content: start; 
   justify-content: start;
 }
@@ -173,7 +172,8 @@ main {
 .game-image {
   width: 100%;
   height: 160px;
-  background-color: #3f3f46;
+  /* Updated placeholder background to match the green theme slightly */
+  background-color: rgba(89, 122, 89, 0.15); 
   object-fit: cover;
 }
 
